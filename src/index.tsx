@@ -1,6 +1,3 @@
-const getExportByBrand = () => ({
-  DailyBugle: require('./DailyBugle').test as Function,
-  DailyPlanet: require('./DailyPlanet').test as Function,
-});
+import store, { IRootState } from './store';
 
-export const test = getExportByBrand()[BRAND];
+export { store, IRootState };
