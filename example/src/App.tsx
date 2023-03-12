@@ -1,18 +1,17 @@
 import * as React from 'react';
-
+import '../environments';
 import { StyleSheet, View, Text } from 'react-native';
-import { multiply } from '@whitelabelnews/state-manager';
+import { test } from '@whitelabelnews/state-manager';
 
 export default function App() {
-  const [result, setResult] = React.useState<number | undefined>();
-
   React.useEffect(() => {
-    multiply(3, 7).then(setResult);
+    console.log('BRAND: ', BRAND);
+    console.log(test());
   }, []);
 
   return (
     <View style={styles.container}>
-      <Text>Result: {result}</Text>
+      <Text>Result: {BRAND}</Text>
     </View>
   );
 }
