@@ -1,7 +1,8 @@
 {
-  "name": "@whitelabelnews/state-manager",
+  "name": "whitelabelnews-state-manager",
   "version": "1.0.0",
-  "description": "test",
+  "private": false,
+  "description": "A statement lib",
   "main": "lib/commonjs/index",
   "module": "lib/module/index",
   "types": "lib/typescript/index.d.ts",

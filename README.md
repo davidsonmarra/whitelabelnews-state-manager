@@ -5,7 +5,7 @@
 ## Installation
 
 ```sh
-npm install @whitelabelnews/state-manager
+npm install whitelabelnews-state-manager
 ```
 
 ## Usage
