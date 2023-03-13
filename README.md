@@ -11,11 +11,11 @@ npm install whitelabelnews-state-manager
 ## Usage
 
 ```js
-import { multiply } from '@whitelabelnews/state-manager';
+import { store, IRootState } from '@whitelabelnews/state-manager';
 
 // ...
 
-const result = await multiply(3, 7);
+<Provider store={store}>{children}</Provider>;
 ```
 
 ## Contributing

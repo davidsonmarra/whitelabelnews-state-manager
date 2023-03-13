@@ -2,8 +2,7 @@
   "compilerOptions": {
     "baseUrl": "./",
     "paths": {
-      "@whitelabelnews/state-manager": ["./src"],
-      "@brand": ["./src/DailyBugle"]
+      "@whitelabelnews/state-manager": ["./src"]
     },
     "allowUnreachableCode": false,
     "allowUnusedLabels": false,

@@ -22,7 +22,7 @@ const newsSlice = createSlice({
     }),
     FETCH_NEWS_SUCCESS: (state, { payload }: PayloadAction<NewsDTO[]>) => ({
       ...state,
-      isEnd: payload?.length < 100,
+      isEnd: payload?.length < 15,
       isLoading: false,
       error: {} as Error | AxiosError,
       newsData: state.newsData.concat(payload),

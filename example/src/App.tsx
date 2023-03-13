@@ -1,18 +1,15 @@
 import * as React from 'react';
 import '../environments';
-import { StyleSheet, View, Text } from 'react-native';
+import { StyleSheet, View } from 'react-native';
 import { Provider } from 'react-redux';
 import { store } from '@whitelabelnews/state-manager';
+import TextBrand from './Text';
 
 export default function App() {
-  React.useEffect(() => {
-    console.log('BRAND: ', store.getState().news);
-  }, []);
-
   return (
     <Provider store={store}>
       <View style={styles.container}>
-        <Text>Result: {BRAND}</Text>
+        <TextBrand />
       </View>
     </Provider>
   );
