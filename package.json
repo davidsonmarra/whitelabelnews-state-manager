@@ -1,6 +1,6 @@
 {
   "name": "whitelabelnews-state-manager",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "private": false,
   "description": "A statement lib",
   "main": "lib/commonjs/index",
