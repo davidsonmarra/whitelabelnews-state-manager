@@ -2,8 +2,9 @@
   "compilerOptions": {
     "baseUrl": "./",
     "paths": {
-      "@whitelabelnews/state-manager": ["./src"]
+      "@whitelabelnews-state-manager": ["./src"]
     },
+    "typeRoots": ["./@types"],
     "allowUnreachableCode": false,
     "allowUnusedLabels": false,
     "esModuleInterop": true,
