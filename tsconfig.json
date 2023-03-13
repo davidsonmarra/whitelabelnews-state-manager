@@ -2,7 +2,7 @@
   "compilerOptions": {
     "baseUrl": "./",
     "paths": {
-      "@whitelabelnews-state-manager": ["./src"]
+      "@whitelabelnews/state-manager": ["./src"]
     },
     "allowUnreachableCode": false,
     "allowUnusedLabels": false,
@@ -23,6 +23,7 @@
     "resolveJsonModule": true,
     "skipLibCheck": true,
     "strict": true,
-    "target": "esnext"
+    "target": "esnext",
+    "declaration": true
   }
 }
