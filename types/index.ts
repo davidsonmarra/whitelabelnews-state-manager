@@ -1,6 +1,10 @@
 import type { AxiosError } from 'axios';
 
-export interface IFetchBooks {}
+export interface IFetchNews {
+  offset?: number;
+  language?: string;
+  search?: string;
+}
 
 export interface NewsDTO {}
 

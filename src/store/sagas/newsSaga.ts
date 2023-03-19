@@ -8,11 +8,13 @@ import {
 } from '../slices/newsSlice';
 import type { IRootState } from '../store';
 
-export function* fetchNews({}: ReturnType<typeof FETCH_NEWS>) {
+export function* fetchNews({
+  payload: { offset, language } = { offset: 1, language: 'en' },
+}: ReturnType<typeof FETCH_NEWS>) {
   const {
     news: { search },
   }: IRootState = yield select();
-  const searchQuery = `/everything?q=${search}&pageSize=15`;
+  const searchQuery = `/everything?q=${search}&pageSize=15&page=${offset}&language=${language}`;
   try {
     const { data } = yield call(api.get, searchQuery);
     yield put(FETCH_NEWS_SUCCESS(data?.articles));

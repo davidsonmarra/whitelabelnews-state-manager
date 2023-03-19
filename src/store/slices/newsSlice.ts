@@ -1,6 +1,6 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 import type { AxiosError } from 'axios';
-import type { InitialStateNewsProps, NewsDTO } from 'types';
+import type { IFetchNews, InitialStateNewsProps, NewsDTO } from 'types';
 
 const getInitialStateByBrand = () => ({
   DailyBugle: require('./DailyBugleInitialStateNews')
@@ -14,10 +14,11 @@ const newsSlice = createSlice({
   name: 'news',
   initialState,
   reducers: {
-    FETCH_NEWS: (state) => ({
+    FETCH_NEWS: (state, { payload }: PayloadAction<IFetchNews>) => ({
       ...state,
       isLoading: true,
       isEnd: false,
+      search: payload.search || state.search,
       error: {} as Error | AxiosError,
     }),
     FETCH_NEWS_SUCCESS: (state, { payload }: PayloadAction<NewsDTO[]>) => ({

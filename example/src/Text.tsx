@@ -8,7 +8,7 @@ export default function TextBrand() {
   const { newsData } = useSelector(({ news }: IRootState) => news);
 
   React.useEffect(() => {
-    dispatch(FETCH_NEWS());
+    dispatch(FETCH_NEWS({}));
   }, [dispatch]);
 
   React.useEffect(() => {
